@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_for_practice/collapse_animated.dart';
 import 'package:sizer/sizer.dart';
-import 'custom_paint.dart';
+
 
 
 void main() {
@@ -25,7 +26,7 @@ class App extends StatelessWidget {
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
               selectedItemColor: Colors.red, unselectedItemColor: Colors.grey),
         ),
-        home: CustomPainWidget(title: 'Flutter Practice'),
+        home: CollapseAnimatedWidget(title: 'Flutter Practice'),
       );
     });
   }
