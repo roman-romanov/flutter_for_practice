@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_for_practice/const/const.dart';
+import 'package:flutter_for_practice/styles/const.dart';
 import 'package:flutter_for_practice/styles/colors.dart';
 import 'package:flutter_for_practice/styles/styles.dart';
 import 'package:flutter_for_practice/styles/values.dart';
