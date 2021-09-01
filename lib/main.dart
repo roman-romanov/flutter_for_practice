@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_for_practice/global_key_keep_state.dart';
 import 'package:sizer/sizer.dart';
-import 'awesome_text.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -24,7 +24,7 @@ class App extends StatelessWidget {
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
               selectedItemColor: Colors.red, unselectedItemColor: Colors.grey),
         ),
-        home: AwesomeText(title: 'Flutter Practice'),
+        home: SwitchSlider(title: 'Flutter Practice'),
       );
     });
   }

@@ -1,4 +1,5 @@
 const heightInfinity = double.infinity;
+const double half = 0.5;
 const double height5 = 5.0;
 const double height10 = 10.0;
 const double height20 = 20.0;
