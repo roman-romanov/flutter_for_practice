@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_for_practice/context.dart';
 import 'package:sizer/sizer.dart';
-import 'page_storage_key_custom.dart';
+import 'main_list.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -15,17 +16,26 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) {
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          bottomNavigationBarTheme: BottomNavigationBarThemeData(
-              selectedItemColor: Colors.red, unselectedItemColor: Colors.grey),
-        ),
-        home: PageStorageKeyExample(title: 'Flutter Practice'),
-      );
+    return LayoutBuilder(builder: (context, constraints) {
+      return Sizer(builder: (context, orientation, deviceType) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            bottomNavigationBarTheme: BottomNavigationBarThemeData(
+                selectedItemColor: Colors.red,
+                unselectedItemColor: Colors.grey),
+          ),
+          initialRoute: '/main_list',
+          routes: {
+            '/main_list': (context) => const MainList(),
+            '/color_button': (context) => const ColorButton(),
+            '/container_colors': (context) => const ContainerColors(),
+          },
+         // home: MainList(),
+        );
+      });
     });
   }
 }
