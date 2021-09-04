@@ -7,3 +7,4 @@ const green = Colors.green;
 const red = Colors.red;
 const amber = Colors.amber;
 const yellow = Colors.yellow;
+const pink = Colors.pink;
