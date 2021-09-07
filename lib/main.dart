@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_for_practice/context.dart';
+import 'package:flutter_for_practice/inherited_widget/example.dart';
 import 'package:sizer/sizer.dart';
 import 'main_list.dart';
 
@@ -32,8 +33,10 @@ class App extends StatelessWidget {
             '/main_list': (context) => const MainList(),
             '/color_button': (context) => const ColorButton(),
             '/container_colors': (context) => const ContainerColors(),
+            '/inherited_widget': (context) =>
+                const InheritedExample(title: 'Inherit Widget'),
           },
-         // home: MainList(),
+          // home: MainList(),
         );
       });
     });
