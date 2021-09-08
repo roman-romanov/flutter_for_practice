@@ -26,6 +26,12 @@ class MainList extends StatelessWidget {
                     Navigator.pushNamed(context, '/inherited_widget');
                   },
                   child: inheritedWidget),
+              //
+              TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/inherited_model');
+                  },
+                  child: inheritedModel),
             ],
           ),
         ),

@@ -14,3 +14,4 @@ const Widget secondPage = Text('Вторая страница');
 const Widget appBarMenuTitle = Text('Меню');
 const Widget colorButtonContext = Text('Пример работы с контекстом');
 const Widget inheritedWidget = Text('Пример работы с InheritedWidget');
+const Widget inheritedModel = Text('Пример работы с InheritedModel');
