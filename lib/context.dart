@@ -13,9 +13,18 @@ class ContainerColors extends StatelessWidget {
     }));
   }
 
+  void onMenuList(BuildContext context) => Navigator.pop(context);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          leading: IconButton(
+            onPressed: () => onMenuList(context),
+            icon: styleIconMenuOpenBlack,
+          ),
+          elevation: 0.0,
+          backgroundColor: white.withOpacity(0)),
       body: SafeArea(
         child: Center(
           child: ElevatedButton(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_for_practice/context.dart';
+import 'package:flutter_for_practice/inherited_widget/inherited_example.dart';
 import 'package:sizer/sizer.dart';
+import 'inherited_widget/inherited_model.dart';
 import 'main_list.dart';
 
 void main() {
@@ -32,8 +34,12 @@ class App extends StatelessWidget {
             '/main_list': (context) => const MainList(),
             '/color_button': (context) => const ColorButton(),
             '/container_colors': (context) => const ContainerColors(),
+            '/inherited_widget': (context) =>
+                const InheritedExample(title: 'Inherit Widget'),
+            '/inherited_model': (context) =>
+                const InheritModel(title: 'Inherit Model'),
           },
-         // home: MainList(),
+          // home: MainList(),
         );
       });
     });
