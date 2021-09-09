@@ -5,9 +5,7 @@ import 'package:flutter_for_practice/styles/styles.dart';
 import 'package:flutter_for_practice/styles/values.dart';
 
 class CollapseAnimatedWidget extends StatefulWidget {
-  final String title;
-  const CollapseAnimatedWidget({Key? key, required this.title})
-      : super(key: key);
+  const CollapseAnimatedWidget({Key? key}) : super(key: key);
 
   @override
   _CollapseAnimatedWidgetState createState() => _CollapseAnimatedWidgetState();
@@ -24,26 +22,40 @@ class _CollapseAnimatedWidgetState extends State<CollapseAnimatedWidget> {
 
   @override
   Widget build(BuildContext context) {
+    void _popNavigator() {
+      Navigator.pop(context);
+    }
+
     return Scaffold(
+      appBar: AppBar(
+          title: appBarAnimatedContainer,
+          leading: IconButton(
+              onPressed: _popNavigator, icon: styleIconMenuOpen)),
       body: SafeArea(
-        child: Column(children: [
-          ElevatedButton(
-              onPressed: _toggle,
-              child: Text(_isCollapsed ? expand : collapse)),
-          Expanded(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  child: Container(
+        child: Column(mainAxisAlignment: mainAxisAlignmentCenter, children: [
+          Center(
+            child: Padding(
+              padding: edgeInsetsEight,
+              child: Card(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
                     color: red,
-                    width: widthInfinity,
-                    child: Padding(
-                      padding: edgeInsetsTwenty,
-                      child: AnimatedContainer(
-                        duration: Duration(milliseconds: 500),
-                        height: _isCollapsed ? 0 : height100,
-                        color: _isCollapsed ? green : amber,
+                  ),
+                  width: widthInfinity,
+                  child: Padding(
+                    padding: edgeInsetsThree,
+                    child: AnimatedContainer(
+                      duration: durationMilliseconds500,
+                      height: _isCollapsed ? 0 : height150,
+                      color: yellow.shade50,
+                      child: Center(
+                        child: Padding(
+                          padding: edgeInsetsEight,
+                          child: Text(textForCollapsedAnimation,
+                              style: styleSimple_FS20,
+                              textAlign: TextAlign.center),
+                        ),
                       ),
                     ),
                   ),
@@ -51,6 +63,9 @@ class _CollapseAnimatedWidgetState extends State<CollapseAnimatedWidget> {
               ),
             ),
           ),
+          ElevatedButton(
+              onPressed: _toggle,
+              child: Text(_isCollapsed ? expand : collapse)),
         ]),
       ),
     );

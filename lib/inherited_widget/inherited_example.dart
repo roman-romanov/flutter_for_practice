@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_for_practice/styles/colors.dart';
 import 'package:flutter_for_practice/styles/const.dart';
 import 'package:flutter_for_practice/styles/styles.dart';
 
@@ -32,10 +31,9 @@ class InheritedExample extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: transparent,
-            elevation: 0.0,
+          title: appBarInheritedExample,
             leading: IconButton(
-                onPressed: _popNavigator, icon: styleIconMenuOpenBlack)),
+                onPressed: _popNavigator, icon: styleIconMenuOpen)),
         body: SafeArea(
           child: Center(
             child: Row(

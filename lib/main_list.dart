@@ -14,30 +14,26 @@ class MainList extends StatelessWidget {
           child: Column(
             crossAxisAlignment: crossAxisAlignmentLeft,
             children: [
-              //
               TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/container_colors');
-                  },
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/collapse_animated'),
+                  child: collapseAnimatedWidget),
+              TextButton(
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/container_colors'),
                   child: colorButtonContext),
-              //
               TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/inherited_widget');
-                  },
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/inherited_widget'),
                   child: inheritedWidget),
-              //
               TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/inherited_model');
-                  },
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/inherited_model'),
                   child: inheritedModel),
-              //
               TextButton(
                   onPressed: () =>
                       Navigator.pushNamed(context, '/inherited_communicate'),
                   child: inheritedCommunicate),
-              //
               TextButton(
                   onPressed: () =>
                       Navigator.pushNamed(context, '/inherited_notifier'),

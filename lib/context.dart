@@ -21,7 +21,7 @@ class ContainerColors extends StatelessWidget {
       appBar: AppBar(
           leading: IconButton(
             onPressed: () => onMenuList(context),
-            icon: styleIconMenuOpenBlack,
+            icon: styleIconMenuOpen,
           ),
           elevation: 0.0,
           backgroundColor: white.withOpacity(0)),
