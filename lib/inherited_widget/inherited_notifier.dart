@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_for_practice/styles/colors.dart';
 import 'package:flutter_for_practice/styles/const.dart';
 import 'package:flutter_for_practice/styles/styles.dart';
 import 'package:flutter_for_practice/styles/values.dart';
@@ -16,10 +15,8 @@ class InheritNotifier extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: transparent,
-        elevation: 0.0,
-        leading:
-            IconButton(onPressed: _popNavigator, icon: styleIconMenuOpenBlack),
+        title: appBarInheritedNotifier,
+        leading: IconButton(onPressed: _popNavigator, icon: styleIconMenuOpen),
       ),
       body: SafeArea(
           child: Center(

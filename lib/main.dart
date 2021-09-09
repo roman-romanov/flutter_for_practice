@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_for_practice/context.dart';
 import 'package:flutter_for_practice/inherited_widget/inherited_example.dart';
 import 'package:sizer/sizer.dart';
+import 'collapse_animated.dart';
 import 'inherited_widget/inherited_communicate.dart';
 import 'inherited_widget/inherited_model.dart';
 import 'inherited_widget/inherited_notifier.dart';
@@ -36,6 +37,7 @@ class App extends StatelessWidget {
             '/main_list': (context) => const MainList(),
             '/color_button': (context) => const ColorButton(),
             '/container_colors': (context) => const ContainerColors(),
+            '/collapse_animated': (context) => const CollapseAnimatedWidget(),
             '/inherited_widget': (context) =>
                 const InheritedExample(title: 'Inherit Widget'),
             '/inherited_model': (context) =>
