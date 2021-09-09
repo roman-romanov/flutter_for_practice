@@ -4,10 +4,9 @@ import 'package:flutter_for_practice/styles/const.dart';
 import 'package:flutter_for_practice/styles/styles.dart';
 import 'package:flutter_for_practice/styles/values.dart';
 
-class InheritedCommunicateStart extends StatelessWidget {
+class InheritNotifier extends StatelessWidget {
   final String title;
-  const InheritedCommunicateStart({Key? key, required this.title})
-      : super(key: key);
+  const InheritNotifier({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +77,7 @@ class FirstNumberWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-        keyboardType: TextInputType.number,
+        keyboardType: TextInputType.phone,
         decoration: const InputDecoration(border: OutlineInputBorder()),
         onChanged: (value) {
           SimpleCalcWidgetProvider.of(context)?.model.firstNumber = value;
@@ -94,7 +93,7 @@ class SecondNumberWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      keyboardType: TextInputType.number,
+      keyboardType: TextInputType.phone,
       decoration: InputDecoration(border: OutlineInputBorder()),
       onChanged: (value) =>
           SimpleCalcWidgetProvider.of(context)?.model.secondNumber = value,
@@ -104,14 +103,9 @@ class SecondNumberWidget extends StatelessWidget {
 
 //******************************************************************************
 
-class SummaryButtonWidget extends StatefulWidget {
+class SummaryButtonWidget extends StatelessWidget {
   const SummaryButtonWidget({Key? key}) : super(key: key);
 
-  @override
-  _SummaryButtonWidgetState createState() => _SummaryButtonWidgetState();
-}
-
-class _SummaryButtonWidgetState extends State<SummaryButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -125,32 +119,14 @@ class _SummaryButtonWidgetState extends State<SummaryButtonWidget> {
 
 //******************************************************************************
 
-class ResultWidget extends StatefulWidget {
+class ResultWidget extends StatelessWidget {
   const ResultWidget({Key? key}) : super(key: key);
 
   @override
-  State<ResultWidget> createState() => _ResultWidgetState();
-}
-
-class _ResultWidgetState extends State<ResultWidget> {
-  String _result = '0';
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    final result = SimpleCalcWidgetProvider.of(context)?.model;
-    result?.addListener(() {
-      _result = '${result.summaryResult}';
-      setState(() {});
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return Text(
-      '$_result',
-      style: styleSimple_FS20,
-    );
+    final result =
+        SimpleCalcWidgetProvider.of(context)?.model.summaryResult ?? '0';
+    return Text('$result', style: styleSimple_FS20);
   }
 }
 
@@ -181,21 +157,21 @@ class SimpleCalcWidgetModel extends ChangeNotifier {
 
 //******************************************************************************
 
-class SimpleCalcWidgetProvider extends InheritedWidget {
+class SimpleCalcWidgetProvider
+    extends InheritedNotifier<SimpleCalcWidgetModel> {
   final SimpleCalcWidgetModel model;
 
   const SimpleCalcWidgetProvider(
       {Key? key, required this.model, required Widget child})
-      : super(key: key, child: child);
+      : super(
+          key: key,
+          notifier: model,
+          child: child,
+        );
 
   static SimpleCalcWidgetProvider? of(BuildContext context) {
     return context
         .dependOnInheritedWidgetOfExactType<SimpleCalcWidgetProvider>();
-  }
-
-  @override
-  bool updateShouldNotify(SimpleCalcWidgetProvider oldWidget) {
-    return model != oldWidget.model;
   }
 }
 

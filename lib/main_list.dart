@@ -34,11 +34,14 @@ class MainList extends StatelessWidget {
                   child: inheritedModel),
               //
               TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(
-                        context, '/inherited_communicate_start');
-                  },
-                  child: inheritedCommunicateStart),
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/inherited_communicate'),
+                  child: inheritedCommunicate),
+              //
+              TextButton(
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/inherited_notifier'),
+                  child: inheritedNotifier),
             ],
           ),
         ),
