@@ -17,5 +17,6 @@ const Widget appBarMenuTitle = Text('Меню');
 const Widget colorButtonContext = Text('Пример работы с контекстом');
 const Widget inheritedWidget = Text('Пример работы с InheritedWidget');
 const Widget inheritedModel = Text('Пример работы с InheritedModel');
-const Widget inheritedCommunicateStart =
-    Text('Пример работы с InheritedCommunicateStart');
+const Widget inheritedCommunicate =
+    Text('Пример работы с InheritedCommunicate');
+const Widget inheritedNotifier = Text('Пример работы с inheritedNotifier');

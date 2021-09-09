@@ -3,8 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_for_practice/context.dart';
 import 'package:flutter_for_practice/inherited_widget/inherited_example.dart';
 import 'package:sizer/sizer.dart';
-import 'inherited_widget/inherited_communicate_start.dart';
+import 'inherited_widget/inherited_communicate.dart';
 import 'inherited_widget/inherited_model.dart';
+import 'inherited_widget/inherited_notifier.dart';
 import 'main_list.dart';
 
 void main() {
@@ -39,9 +40,10 @@ class App extends StatelessWidget {
                 const InheritedExample(title: 'Inherit Widget'),
             '/inherited_model': (context) =>
                 const InheritModel(title: 'Inherit Model'),
-            '/inherited_communicate_start': (context) =>
-                const InheritedCommunicateStart(
-                    title: 'Inherited Communicate Start'),
+            '/inherited_communicate': (context) =>
+                const InheritedCommunicateStart(title: 'Inherited Communicate'),
+            '/inherited_notifier': (context) =>
+                const InheritNotifier(title: 'Inherited Notifier'),
           },
           // home: MainList(),
         );
