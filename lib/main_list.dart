@@ -8,10 +8,10 @@ class MainList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      return SafeArea(
-        child: Scaffold(
-          appBar: AppBar(title: appBarMenuTitle),
-          body: Column(
+      return Scaffold(
+        appBar: AppBar(title: appBarMenuTitle, elevation: 0.0),
+        body: SafeArea(
+          child: Column(
             crossAxisAlignment: crossAxisAlignmentLeft,
             children: [
               //
@@ -32,6 +32,13 @@ class MainList extends StatelessWidget {
                     Navigator.pushNamed(context, '/inherited_model');
                   },
                   child: inheritedModel),
+              //
+              TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(
+                        context, '/inherited_communicate_start');
+                  },
+                  child: inheritedCommunicateStart),
             ],
           ),
         ),

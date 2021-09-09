@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const String calculateAmount = 'Посчитать сумму';
+const String result = 'Результат';
 const String collapse = 'Свернуть';
 const String expand = 'Развернуть';
 const String toggle = 'Тумблер';
@@ -15,3 +17,5 @@ const Widget appBarMenuTitle = Text('Меню');
 const Widget colorButtonContext = Text('Пример работы с контекстом');
 const Widget inheritedWidget = Text('Пример работы с InheritedWidget');
 const Widget inheritedModel = Text('Пример работы с InheritedModel');
+const Widget inheritedCommunicateStart =
+    Text('Пример работы с InheritedCommunicateStart');
