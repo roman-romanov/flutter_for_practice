@@ -20,6 +20,8 @@ const Widget appBarAnimatedContainer = Text('Виджет AnimatedContainer');
 const Widget appBarInheritedNotifier = Text('Виджет InheritedNotifier');
 const Widget appBarInheritedModel = Text('Модель InheritedModel');
 const Widget appBarInheritedExample = Text('Пример InheritedExample');
+const Widget appBarContext =
+    Text('Пример работы с Контекстом', overflow: TextOverflow.fade);
 const Widget appBarInheritedCommunicate =
     Text('Пример InheritedCommunicate', overflow: TextOverflow.fade);
 const Widget collapseAnimatedWidget = Text('Пример работы с AnimatedContainer');
