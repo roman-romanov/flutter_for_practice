@@ -19,12 +19,9 @@ class ContainerColors extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: appBarContext,
           leading: IconButton(
-            onPressed: () => onMenuList(context),
-            icon: styleIconMenuOpen,
-          ),
-          elevation: 0.0,
-          backgroundColor: white.withOpacity(0)),
+              onPressed: () => onMenuList(context), icon: styleIconMenuOpen)),
       body: SafeArea(
         child: Center(
           child: ElevatedButton(
@@ -43,6 +40,7 @@ class ContainerColorsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: appBarContext,),
       body: SafeArea(
         child: InheritExample(
           child: ColoredWidget(

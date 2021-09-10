@@ -41,13 +41,13 @@ class SimpleCalcWidget extends StatefulWidget {
 }
 
 class _SimpleCalcWidgetState extends State<SimpleCalcWidget> {
-  final _model = SimpleCalcWidgetModel();
+  final _model = ChangeNotifierModel();
   @override
   Widget build(BuildContext context) {
     return Center(
         child: Padding(
       padding: edgeInsetsSymHorThirty,
-      child: SimpleCalcWidgetProvider(
+      child: WidgetProvider(
         model: _model,
         child: Column(
           mainAxisSize: mainAxisSizeMin,
@@ -77,7 +77,7 @@ class FirstNumberWidget extends StatelessWidget {
         keyboardType: TextInputType.phone,
         decoration: const InputDecoration(border: OutlineInputBorder()),
         onChanged: (value) {
-          SimpleCalcWidgetProvider.of(context)?.model.firstNumber = value;
+          WidgetProvider.of(context)?.model.firstNumber = value;
         });
   }
 }
@@ -93,7 +93,7 @@ class SecondNumberWidget extends StatelessWidget {
       keyboardType: TextInputType.phone,
       decoration: InputDecoration(border: OutlineInputBorder()),
       onChanged: (value) =>
-          SimpleCalcWidgetProvider.of(context)?.model.secondNumber = value,
+          WidgetProvider.of(context)?.model.secondNumber = value,
     );
   }
 }
@@ -107,7 +107,7 @@ class SummaryButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        SimpleCalcWidgetProvider.of(context)?.model.summ();
+        WidgetProvider.of(context)?.model.summ();
       },
       child: Text(calculateAmount),
     );
@@ -121,15 +121,14 @@ class ResultWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final result =
-        SimpleCalcWidgetProvider.of(context)?.model.summaryResult ?? '0';
+    final result = WidgetProvider.of(context)?.model.summaryResult ?? '0';
     return Text('$result', style: styleSimple_FS20);
   }
 }
 
 //******************************************************************************
 
-class SimpleCalcWidgetModel extends ChangeNotifier {
+class ChangeNotifierModel extends ChangeNotifier {
   int? _firstNumber;
   int? _secondNumber;
   int? summaryResult;
@@ -154,21 +153,18 @@ class SimpleCalcWidgetModel extends ChangeNotifier {
 
 //******************************************************************************
 
-class SimpleCalcWidgetProvider
-    extends InheritedNotifier<SimpleCalcWidgetModel> {
-  final SimpleCalcWidgetModel model;
+class WidgetProvider extends InheritedNotifier<ChangeNotifierModel> {
+  final ChangeNotifierModel model;
 
-  const SimpleCalcWidgetProvider(
-      {Key? key, required this.model, required Widget child})
+  const WidgetProvider({Key? key, required this.model, required Widget child})
       : super(
           key: key,
           notifier: model,
           child: child,
         );
 
-  static SimpleCalcWidgetProvider? of(BuildContext context) {
-    return context
-        .dependOnInheritedWidgetOfExactType<SimpleCalcWidgetProvider>();
+  static WidgetProvider? of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<WidgetProvider>();
   }
 }
 

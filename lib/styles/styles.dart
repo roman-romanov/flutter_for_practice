@@ -27,9 +27,12 @@ const crossAxisAlignmentLeft = CrossAxisAlignment.start;
 
 final styleSimple_FS10 = TextStyle(fontSize: 10);
 final styleSimple_FS20 = TextStyle(fontSize: 20);
+final styleSimple_FS25 = TextStyle(fontSize: 25);
 final styleSimple_FS30 = TextStyle(fontSize: 30);
 final styleSimple_FS40 = TextStyle(fontSize: 40);
 final styleSimple_FS50 = TextStyle(fontSize: 50);
 final styleDecrement =
     ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.red));
 final styleIconMenuOpen = Icon(Icons.menu_open);
+
+final styleTextButtonFS_20=  TextButton.styleFrom(textStyle: styleSimple_FS20);

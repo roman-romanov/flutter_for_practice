@@ -7,7 +7,7 @@ import 'collapse_animated.dart';
 import 'inherited_widget/inherited_communicate.dart';
 import 'inherited_widget/inherited_model.dart';
 import 'inherited_widget/inherited_notifier.dart';
-import 'main_list.dart';
+import 'menu_list.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -32,9 +32,9 @@ class App extends StatelessWidget {
                 selectedItemColor: Colors.red,
                 unselectedItemColor: Colors.grey),
           ),
-          initialRoute: '/main_list',
+          initialRoute: '/menu_list',
           routes: {
-            '/main_list': (context) => const MainList(),
+            '/menu_list': (context) => const MenuList(),
             '/color_button': (context) => const ColorButton(),
             '/container_colors': (context) => const ContainerColors(),
             '/collapse_animated': (context) => const CollapseAnimatedWidget(),
