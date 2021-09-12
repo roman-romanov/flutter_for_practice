@@ -11,8 +11,13 @@ const String decrement = 'Уменьшить';
 const String error = 'Ошибка';
 const String press = 'Жми';
 const String goTo = 'Перейти';
+const String encode = 'Кодировать';
+const String decode = 'Декодировать';
 const String textForCollapsedAnimation =
     'Данный виджет AnimatedContainer позволяет сворачивать и разворачивать контейнер';
+
+//******************************************************************************
+
 const Widget stringGlobalKey = Text('Работа с глобальным ключом');
 const Widget secondPage = Text('Вторая страница');
 const Widget appBarMenuTitle = Text('Меню');
@@ -31,3 +36,4 @@ const Widget inheritedModel = Text('Пример работы с InheritedModel'
 const Widget inheritedCommunicate =
     Text('Пример работы с InheritedCommunicate');
 const Widget inheritedNotifier = Text('Пример работы с inheritedNotifier');
+const Widget jsonExample = Text('Пример работы с Json');

@@ -22,15 +22,12 @@ class _CollapseAnimatedWidgetState extends State<CollapseAnimatedWidget> {
 
   @override
   Widget build(BuildContext context) {
-    void _popNavigator() {
-      Navigator.pop(context);
-    }
+    void _onMenuList() => Navigator.pop(context);
 
     return Scaffold(
       appBar: AppBar(
           title: appBarAnimatedContainer,
-          leading: IconButton(
-              onPressed: _popNavigator, icon: styleIconMenuOpen)),
+          leading: IconButton(onPressed: _onMenuList, icon: iconMenuOpen)),
       body: SafeArea(
         child: Column(mainAxisAlignment: mainAxisAlignmentCenter, children: [
           Center(

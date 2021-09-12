@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_for_practice/context.dart';
 import 'package:flutter_for_practice/inherited_widget/inherited_example.dart';
+import 'package:flutter_for_practice/json/json_example.dart';
 import 'package:sizer/sizer.dart';
 import 'collapse_animated.dart';
 import 'inherited_widget/inherited_communicate.dart';
@@ -46,6 +47,7 @@ class App extends StatelessWidget {
                 const InheritedCommunicateStart(title: 'Inherited Communicate'),
             '/inherited_notifier': (context) =>
                 const InheritNotifier(title: 'Inherited Notifier'),
+            '/json_example': (context) => const JsonExample(),
           },
           // home: MainList(),
         );

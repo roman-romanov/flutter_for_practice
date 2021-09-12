@@ -33,7 +33,7 @@ class InheritedExample extends StatelessWidget {
         appBar: AppBar(
           title: appBarInheritedExample,
             leading: IconButton(
-                onPressed: _popNavigator, icon: styleIconMenuOpen)),
+                onPressed: _popNavigator, icon: iconMenuOpen)),
         body: SafeArea(
           child: Center(
             child: Row(

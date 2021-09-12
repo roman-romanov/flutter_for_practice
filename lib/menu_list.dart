@@ -38,6 +38,10 @@ class _MenuListState extends State<MenuList> {
           style: styleTextButtonFS_20,
           onPressed: () => Navigator.pushNamed(context, '/inherited_notifier'),
           child: inheritedNotifier),
+      TextButton(
+          style: styleTextButtonFS_20,
+          onPressed: () => Navigator.pushNamed(context, '/json_example'),
+          child: jsonExample),
     ];
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(

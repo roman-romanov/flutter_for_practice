@@ -17,7 +17,7 @@ class InheritedCommunicateStart extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: appBarInheritedCommunicate,
-        leading: IconButton(onPressed: _popNavigator, icon: styleIconMenuOpen),
+        leading: IconButton(onPressed: _popNavigator, icon: iconMenuOpen),
       ),
       body: SafeArea(
           child: Center(
