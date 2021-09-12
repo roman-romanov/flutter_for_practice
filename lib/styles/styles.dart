@@ -33,6 +33,7 @@ final styleSimple_FS40 = TextStyle(fontSize: 40);
 final styleSimple_FS50 = TextStyle(fontSize: 50);
 final styleDecrement =
     ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.red));
-final styleIconMenuOpen = Icon(Icons.menu_open);
+final iconMenuOpen = Icon(Icons.menu_open);
 
 final styleTextButtonFS_20=  TextButton.styleFrom(textStyle: styleSimple_FS20);
+

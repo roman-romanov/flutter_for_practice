@@ -21,7 +21,7 @@ class ContainerColors extends StatelessWidget {
       appBar: AppBar(
         title: appBarContext,
           leading: IconButton(
-              onPressed: () => onMenuList(context), icon: styleIconMenuOpen)),
+              onPressed: () => onMenuList(context), icon: iconMenuOpen)),
       body: SafeArea(
         child: Center(
           child: ElevatedButton(

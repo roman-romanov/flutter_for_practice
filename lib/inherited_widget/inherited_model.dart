@@ -34,7 +34,7 @@ class InheritModel extends StatelessWidget {
         appBar: AppBar(
           title: appBarInheritedModel,
             leading:
-                IconButton(onPressed: _popNavigator, icon: styleIconMenuOpen)),
+                IconButton(onPressed: _popNavigator, icon: iconMenuOpen)),
         body: SafeArea(
           child: Center(
             child: DataOwnerStatefull(),

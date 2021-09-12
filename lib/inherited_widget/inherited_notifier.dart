@@ -16,7 +16,7 @@ class InheritNotifier extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: appBarInheritedNotifier,
-        leading: IconButton(onPressed: _popNavigator, icon: styleIconMenuOpen),
+        leading: IconButton(onPressed: _popNavigator, icon: iconMenuOpen),
       ),
       body: SafeArea(
           child: Center(
