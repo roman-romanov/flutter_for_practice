@@ -34,6 +34,12 @@ final styleSimple_FS50 = TextStyle(fontSize: 50);
 final styleDecrement =
     ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.red));
 final iconMenuOpen = Icon(Icons.menu_open);
+final iconArrowBack = Icon(Icons.arrow_back, color: Colors.black);
 
-final styleTextButtonFS_20=  TextButton.styleFrom(textStyle: styleSimple_FS20);
-
+final styleTextButtonFS_20 = TextButton.styleFrom(textStyle: styleSimple_FS20);
+final fontFamTNR = TextStyle(fontSize: 20, fontFamily: 'Times New Roman');
+const hintStyle = const TextStyle(
+  fontSize: 20,
+  color: Colors.black26,
+  fontFamily: 'Times New Roman',
+);

@@ -37,3 +37,4 @@ const Widget inheritedCommunicate =
     Text('Пример работы с InheritedCommunicate');
 const Widget inheritedNotifier = Text('Пример работы с inheritedNotifier');
 const Widget jsonExample = Text('Пример работы с Json');
+const Widget customAppBarExample = Text('Пример работы с Custom AppBar');
