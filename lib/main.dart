@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_for_practice/context.dart';
 import 'package:flutter_for_practice/inherited_widget/inherited_example.dart';
 import 'package:flutter_for_practice/json/json_example.dart';
+import 'package:flutter_for_practice/search_text.dart';
 import 'package:sizer/sizer.dart';
 import 'collapse_animated.dart';
 import 'custom_appbar.dart';
@@ -49,7 +50,8 @@ class App extends StatelessWidget {
             '/inherited_notifier': (context) =>
                 const InheritNotifier(title: 'Inherited Notifier'),
             '/json_example': (context) => const JsonExample(),
-            '/search_appbar': (context) => CustomAppBar(),
+            '/custom_appbar': (context) => CustomAppBar(),
+            '/search_text': (context) => SearchText(),
           },
           // home: MainList(),
         );
