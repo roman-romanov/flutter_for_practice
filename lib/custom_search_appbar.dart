@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-
 import 'styles/styles.dart';
 
 class CustomAppBar extends StatefulWidget with PreferredSizeWidget {
@@ -13,7 +12,20 @@ class CustomAppBar extends StatefulWidget with PreferredSizeWidget {
 }
 
 class _SearchAppBar extends State<CustomAppBar> {
+  final _textEditingController = TextEditingController();
+
   void _onMenuList() => Navigator.pop(context);
+
+  void _searchText() {
+    final query = _textEditingController.text;
+  }
+
+  @override
+  void initState() {
+    _textEditingController.addListener(() {});
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,9 +77,6 @@ class _SearchAppBar extends State<CustomAppBar> {
             ),
           ),
         ],
-      ),
-      body: ListView(
-        children: [],
       ),
     );
   }

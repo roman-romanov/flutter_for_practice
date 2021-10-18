@@ -37,13 +37,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   location: ^4.3.0
   intl: ^0.17.0
-  provider: ^5.0.0
+  provider: ^6.0.0
   geolocator: ^7.2.0+1
   sizer: ^2.0.13
   overflow_page_view: ^0.1.0
   split_view: ^3.0.0
   rxdart: ^0.27.1
-  flutter_bloc: ^7.1.0
+  flutter_bloc: ^7.3.1
   json_annotation: ^4.1.0
   
   

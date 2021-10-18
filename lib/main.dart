@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_for_practice/context.dart';
 import 'package:flutter_for_practice/inherited_widget/inherited_example.dart';
 import 'package:flutter_for_practice/json/json_example.dart';
-import 'package:flutter_for_practice/search_text.dart';
+import 'package:flutter_for_practice/search_product.dart';
 import 'package:sizer/sizer.dart';
 import 'collapse_animated.dart';
-import 'custom_appbar.dart';
+import 'custom_search_appbar.dart';
 import 'inherited_widget/inherited_communicate.dart';
 import 'inherited_widget/inherited_model.dart';
 import 'inherited_widget/inherited_notifier.dart';
@@ -51,7 +51,7 @@ class App extends StatelessWidget {
                 const InheritNotifier(title: 'Inherited Notifier'),
             '/json_example': (context) => const JsonExample(),
             '/custom_appbar': (context) => CustomAppBar(),
-            '/search_text': (context) => SearchText(),
+            '/search_text': (context) => SearchProduct(),
           },
           // home: MainList(),
         );
