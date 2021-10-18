@@ -44,8 +44,12 @@ class _MenuListState extends State<MenuList> {
           child: jsonExample),
       TextButton(
           style: styleTextButtonFS_20,
-          onPressed: () => Navigator.pushNamed(context, '/search_appbar'),
+          onPressed: () => Navigator.pushNamed(context, '/custom_appbar'),
           child: customAppBarExample),
+      TextButton(
+          style: styleTextButtonFS_20,
+          onPressed: () => Navigator.pushNamed(context, '/search_text'),
+          child: searchText),
     ];
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(

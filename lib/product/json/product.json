@@ -1,0 +1,83 @@
+[
+  {
+    "id": 0,
+    "name": "Кроссовки мужские C367S2125 бежевые с коричневым 40",
+    "category": "Sport poyafzali",
+    "imageUrl": "https://joma-rus.ru/upload/resize_cache/iblock/1f8/450_450_140cd750bba9870f18aada2478b24840a/336ymk1qymxvc7d9nehxsv39r8qfq1ld.jpg",
+    "oldPrice": "8 360",
+    "price": "5 141"
+  },
+  {
+    "id": 1,
+    "articleNumber": "C800LS2102",
+    "name": "Кроссовки мужские C800LS2102 белые 37",
+    "category": "Sport poyafzali",
+    "imageUrl": "https://joma-rus.ru/upload/resize_cache/iblock/cff/450_450_140cd750bba9870f18aada2478b24840a/h7zx7bw748szhie0ua7r3adefpxanhtv.jpg",
+    "oldPrice": "5 141",
+    "price": "3 899"
+  },
+  {
+    "id": 2,
+    "name": "Футбольный мяч Dali 3 бело-синий",
+    "category": "Sport topi",
+    "imageUrl": "https://joma-rus.ru/upload/resize_cache/iblock/4f7/450_450_140cd750bba9870f18aada2478b24840a/4f7657aeb7d277f25a3f062f4e61f48a.jpg",
+    "oldPrice": "3 000",
+    "price": "2 799"
+  },
+  {
+    "id": 3,
+    "name": "Шлёпки мужские Aqua темно-синие 39",
+    "category": "Sport poyafzali",
+    "imageUrl": "https://joma-rus.ru/upload/resize_cache/iblock/7e7/450_450_140cd750bba9870f18aada2478b24840a/7e7328aaadd6b4f455997a72acb3485a.jpg",
+    "oldPrice": "2 150",
+    "price": "1 599"
+  },
+  {
+    "id": 4,
+    "name": "Футзалки LIGA 5 903 темно-синие 38",
+    "category": "Sport poyafzali",
+    "imageUrl": "https://joma-rus.ru/upload/resize_cache/iblock/915/450_450_140cd750bba9870f18aada2478b24840a/91592861ada612f05ab618f755da84ef.jpg",
+    "oldPrice": "5200",
+    "price": "3 899"
+  },
+  {
+    "id": 5,
+    "name": "Футболка Academy III 101656.332 темно-синяя 8XS-7XS",
+    "category": "Erkak sport kiyimi",
+    "imageUrl": "https://joma-rus.ru/upload/resize_cache/iblock/9bb/450_450_140cd750bba9870f18aada2478b24840a/9bb1b6a3c38f4e2874e60d4261c8b9a6.jpg",
+    "oldPrice": "2 200",
+    "price": "1 499"
+  },
+  {
+    "id": 6,
+    "name": "Футболка Academy III 101656.881 оранжевая-черная 8XS-7XS",
+    "category": "Erkak sport kiyimi",
+    "imageUrl": "https://joma-rus.ru/upload/resize_cache/iblock/a8e/450_450_140cd750bba9870f18aada2478b24840a/a8ec078a0e1122e6e2bbbf2852e3c13f.jpg",
+    "oldPrice": "2799",
+    "price": "1196"
+  },
+  {
+    "id": 7,
+    "name": "Футболка SUPERNOVA II 101604.332 темно-синяя с белым 6XS-5XS",
+    "category": "Erkak sport kiyimi",
+    "imageUrl": "https://joma-rus.ru/upload/resize_cache/iblock/2e5/450_450_140cd750bba9870f18aada2478b24840a/2e50b10573a0a676e90026a4909353e0.jpg",
+    "oldPrice": "3 250",
+    "price": "2 799"
+  },
+  {
+    "id": 8,
+    "name": "Шорты Liga сине-белые 6XS-5XS",
+    "category": "Erkak sport kiyimi",
+    "imageUrl": "https://joma-rus.ru/upload/resize_cache/iblock/bd7/450_450_140cd750bba9870f18aada2478b24840a/bd75ce0719c865b18323b3c46c155145.jpg",
+    "oldPrice": "1 750",
+    "price": "1 299"
+  },
+  {
+    "id": 9,
+    "name": "Гетры Professional II темно-сине-белые S",
+    "category": "Erkak sport kiyimi",
+    "imageUrl": "https://joma-rus.ru/upload/resize_cache/iblock/3d4/450_450_140cd750bba9870f18aada2478b24840a/3d40fda42cbe5f78ede021183c4a331d.jpg",
+    "oldPrice": "950",
+    "price": "699"
+  }
+]
