@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_for_practice/styles/styles.dart';
+import 'navigation/bloc_navigation.dart';
 import 'styles/const.dart';
 
-class MenuList extends StatefulWidget {
+class MenuList extends StatefulWidget with NavigationStates {
   const MenuList({Key? key}) : super(key: key);
 
   @override
@@ -48,8 +49,8 @@ class _MenuListState extends State<MenuList> {
           child: customAppBarExample),
       TextButton(
           style: styleTextButtonFS_20,
-          onPressed: () => Navigator.pushNamed(context, '/search_text'),
-          child: searchText),
+          onPressed: () => Navigator.pushNamed(context, '/search_product'),
+          child: searchProduct),
     ];
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
