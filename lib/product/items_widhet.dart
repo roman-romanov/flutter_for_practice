@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_for_practice/product/red_line.dart';
-import 'package:flutter_for_practice/styles/styles.dart';
+import 'build_product_model.dart';
 import 'product_model.dart';
 import 'read_from_json.dart';
 import 'search_widget.dart';
@@ -34,10 +33,12 @@ class ItemsWidgetState extends State<ItemsWidget> {
                     } else if (snapshot.hasData) {
                       final data = snapshot.data as List<ProductModel>;
                       return ListView.builder(
+                        physics: BouncingScrollPhysics(
+                            parent: AlwaysScrollableScrollPhysics()),
                         itemCount: data.length,
                         itemBuilder: (context, index) {
                           final prodModel = data[index];
-                          return buildProductModel(prodModel);
+                          return BuildProductModel(productModel: prodModel);
                         },
                       );
                     } else {
@@ -57,52 +58,11 @@ class ItemsWidgetState extends State<ItemsWidget> {
         onChanged: searchProductModel,
       );
 
-  Widget buildProductModel(ProductModel productModel) {
-    return Card(
-      margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
-      child: Stack(
-        children: [
-          ListTile(
-            contentPadding: EdgeInsets.all(10),
-            //dense: true,
-            leading: Image.network(
-              '${productModel.imageUrl}',
-              fit: BoxFit.cover,
-              width: 100,
-              height: 100,
-            ),
-            title: Text('Арт: ${productModel.id}\n${productModel.name}'),
-            subtitle: Text('Kategoriya: ${productModel.category}'),
-            isThreeLine: true,
-          ),
-          Positioned.fill(
-            top: 55,
-            child: ListTile(
-              dense: true,
-              title: Text(
-                '${productModel.price} so\'m',
-                style: priceStyle,
-              ),
-              subtitle: Row(
-                children: [
-                  CustomPaint(
-                    foregroundPainter: RedLinePaint(),
-                    child: Text('${productModel.oldPrice} so\'m'),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
   void searchProductModel(String query) {
     final List<ProductModel> dataJson = [];
     final pm = dataJson.where((products) {
       final nameLower = products.name!.toLowerCase();
-      final articleLower = products.id!.toLowerCase();
+      final articleLower = products.article!.toLowerCase();
       final categoryLower = products.category!.toLowerCase();
       final searchLower = query.toLowerCase();
 

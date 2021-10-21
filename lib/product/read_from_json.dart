@@ -10,7 +10,7 @@ Future<List<ProductModel>> readFromJson(String query) async {
       .map((dataOfJson) => ProductModel.fromJson(dataOfJson))
       .where((products) {
     final nameLower = products.name!.toLowerCase();
-    final articleLower = products.id!.toLowerCase();
+    final articleLower = products.article!.toLowerCase();
     final categoryLower = products.category!.toLowerCase();
     final searchLower = query.toLowerCase();
 
