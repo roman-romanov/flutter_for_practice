@@ -45,10 +45,6 @@ class _MenuListState extends State<MenuList> {
           child: jsonExample),
       TextButton(
           style: styleTextButtonFS_20,
-          onPressed: () => Navigator.pushNamed(context, '/custom_appbar'),
-          child: customAppBarExample),
-      TextButton(
-          style: styleTextButtonFS_20,
           onPressed: () => Navigator.pushNamed(context, '/search_product'),
           child: searchProduct),
     ];
