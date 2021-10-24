@@ -15,12 +15,12 @@ class ProductModel {
   });
 
   factory ProductModel.fromJson(Map<String, dynamic> json) => ProductModel(
-        article: json['article'],
-        name: json['name'],
-        category: json['category'],
-        imageUrl: json['imageUrl'],
-        oldPrice: json['oldPrice'],
-        price: json['price'],
+        article: json['article'] as String,
+        name: json['name'] as String,
+        category: json['category']as String,
+        imageUrl: json['imageUrl'] as String,
+        oldPrice: json['oldPrice'] as String,
+        price: json['price'] as String,
       );
 
   Map<String, dynamic> toJson() => {

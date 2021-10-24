@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_for_practice/product/items_widhet.dart';
+import 'package:flutter_for_practice/product/items_widget.dart';
 import 'navigation/bloc_navigation.dart';
 
 class SearchProduct extends StatelessWidget with NavigationStates {
