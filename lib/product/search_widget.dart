@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_for_practice/styles/styles.dart';
 
 class SearchWidget extends StatefulWidget {
   final String text;
   final ValueChanged<String> onChanged;
   final String hintText;
 
-  const SearchWidget({
-    Key? key,
-    required this.text,
-    required this.onChanged,
-    required this.hintText,
-  }) : super(key: key);
+  const SearchWidget(
+      {Key? key,
+      required this.text,
+      required this.onChanged,
+      required this.hintText})
+      : super(key: key);
 
   @override
   _SearchWidgetState createState() => _SearchWidgetState();
@@ -21,39 +22,39 @@ class _SearchWidgetState extends State<SearchWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final styleActive = TextStyle(color: Colors.black);
-    final styleHint = TextStyle(color: Colors.black54);
-    final style = widget.text.isEmpty ? styleHint : styleActive;
-
-    return Container(
-      height: 42,
-      margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: Colors.white,
-        border: Border.all(color: Colors.black26),
-      ),
-      padding: const EdgeInsets.symmetric(horizontal: 8),
-      child: TextField(
-        controller: controller,
-        decoration: InputDecoration(
-          icon: Icon(Icons.search, color: style.color),
-          suffixIcon: widget.text.isNotEmpty
-              ? GestureDetector(
-                  child: Icon(Icons.close, color: style.color),
-                  onTap: () {
-                    controller.clear();
-                    widget.onChanged('');
-                    FocusScope.of(context).requestFocus(FocusNode());
-                  },
-                )
-              : null,
-          hintText: widget.hintText,
-          hintStyle: style,
-          border: InputBorder.none,
+    return Align(
+      widthFactor: 0.9,
+      child: Container(
+        height: 42,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          color: Colors.white,
+          border: Border.all(color: Colors.black26),
         ),
-        style: style,
-        onChanged: widget.onChanged,
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: Stack(
+          children: [
+            TextField(
+              controller: controller,
+              decoration: InputDecoration(
+                  contentPadding: EdgeInsets.symmetric(vertical: 11),
+                  suffixIcon: widget.text.isNotEmpty
+                      ? GestureDetector(
+                          child: Icon(Icons.close),
+                          onTap: () {
+                            controller.clear();
+                            widget.onChanged('');
+                            FocusScope.of(context).requestFocus(FocusNode());
+                          })
+                      : Icon(Icons.search),
+                  hintText: widget.hintText,
+                  hintStyle: widget.text.isEmpty ? styleHint : styleActive,
+                  border: InputBorder.none),
+              onChanged: widget.onChanged,
+            ),
+          ],
+        ),
       ),
     );
   }

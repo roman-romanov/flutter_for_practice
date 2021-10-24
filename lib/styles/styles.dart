@@ -44,3 +44,8 @@ const hintStyle = const TextStyle(
   fontFamily: 'Times New Roman',
 );
 const priceStyle = TextStyle(color: Colors.indigo, fontWeight: FontWeight.bold);
+
+final styleActive = TextStyle(
+    color: Colors.black, fontSize: 20.0, fontFamily: 'Times New Roman');
+final styleHint = TextStyle(
+    color: Colors.black54, fontSize: 20.0, fontFamily: 'Times New Roman');
