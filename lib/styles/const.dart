@@ -39,3 +39,6 @@ const Widget inheritedNotifier = Text('Пример работы с inheritedNot
 const Widget jsonExample = Text('Пример работы с Json');
 const Widget customAppBarExample = Text('Пример работы с Custom AppBar');
 const Widget searchProduct = Text('Пример работы с поиском текста');
+const Widget addToCart =
+    Text('В корзину', style: TextStyle(color: Colors.white));
+const Widget shoppingCart = Icon(Icons.shopping_cart, color: Colors.red);

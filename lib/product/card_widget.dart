@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_for_practice/styles/colors.dart';
+import 'package:flutter_for_practice/styles/const.dart';
 import 'package:flutter_for_practice/styles/styles.dart';
 import 'product_model.dart';
 import 'red_line_widget.dart';
@@ -13,36 +15,40 @@ class CardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Card(
-        margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+    return Card(
+      margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+      child: InkWell(
+        onTap: () {},
+        splashColor: grey.shade200,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Expanded(
               child: Container(
+                  height: 120,
                   padding: EdgeInsets.only(left: 8.0, right: 8.0),
-                  child: Image.network('${productModel.imageUrl}')),
+                  child: Image.network('${productModel.imageUrl}',
+                      fit: BoxFit.contain)),
             ),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ListTile(
-                    contentPadding: EdgeInsets.zero,
-                    title: Text(
-                        'Арт: ${productModel.article}\n${productModel.name}'),
-                    subtitle: Text('Категория: ${productModel.category}'),
-                    isThreeLine: true,
+                  Text(
+                    'Арт: ${productModel.article}',
+                    style: oldPriceStyle,
                   ),
-                  Text('${productModel.price} ₽', style: priceStyle),
+                  Text('${productModel.name}'),
                   Row(
                     children: [
-                      CustomPaint(
-                        foregroundPainter: RedLinePaint(),
-                        child: Text('${productModel.oldPrice} ₽'),
-                      ),
+                      Column(children: [
+                        Text('${productModel.price} ₽', style: priceStyle),
+                        CustomPaint(
+                            foregroundPainter: RedLinePaint(),
+                            child: Text('${productModel.oldPrice} ₽',
+                                style: oldPriceStyle)),
+                      ]),
+                      IconButton(onPressed: () {}, icon: shoppingCart)
                     ],
                   ),
                 ],
@@ -52,43 +58,5 @@ class CardWidget extends StatelessWidget {
         ),
       ),
     );
-    // Card(
-    //   margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
-    //   child: Stack(
-    //     children: [
-    //       ListTile(
-    //         dense: true,
-    //         contentPadding: EdgeInsets.all(10),
-    //         leading: Image.network(
-    //           '${productModel.imageUrl}',
-    //           fit: BoxFit.cover,
-    //           width: 100,
-    //           height: 100,
-    //         ),
-    //         title: Text('Арт: ${productModel.article}\n${productModel.name}'),
-    //         subtitle: Text('Категория: ${productModel.category}'),
-    //         isThreeLine: true,
-    //       ),
-    //       Positioned.fill(
-    //         top: 55,
-    //         child: ListTile(
-    //           dense: true,
-    //           title: Text(
-    //             '${productModel.price} ₽',
-    //             style: priceStyle,
-    //           ),
-    //           subtitle: Row(
-    //             children: [
-    //               CustomPaint(
-    //                 foregroundPainter: RedLinePaint(),
-    //                 child: Text('${productModel.oldPrice} ₽'),
-    //               ),
-    //             ],
-    //           ),
-    //         ),
-    //       ),
-    //     ],
-    //   ),
-    // );
   }
 }
