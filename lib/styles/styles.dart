@@ -44,6 +44,8 @@ const hintStyle = const TextStyle(
   fontFamily: 'Times New Roman',
 );
 const priceStyle = TextStyle(color: Colors.indigo, fontWeight: FontWeight.bold);
+const oldPriceStyle = TextStyle(color: Colors.grey);
+const articleStyle = TextStyle(color: Colors.black45);
 
 final styleActive = TextStyle(
     color: Colors.black, fontSize: 20.0, fontFamily: 'Times New Roman');
